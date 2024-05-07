@@ -1,0 +1,472 @@
+
+
+/* The body, making up the bulk of each webpage */
+body {
+  /* The main font used on the website */
+  font-family: Bradley Hand, cursive;
+  font-weight: 600;
+
+  /* This just helps align some things properly */
+  margin: 0;
+  padding: 0;
+
+  /* The main color used on the website */
+  background-color: rgb(150, 182, 184);
+}
+
+/* A grain-like overlay lied over entire website to add texture */
+.noise-overlay {
+  /* Positioning */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Image, stylized */
+  background-image: url(https://russellrozenbaum.me/AdobeStock_263381557.jpeg);
+  background-size: cover;
+  background-repeat: repeat;
+  opacity: 0.1;
+
+  /* To-Do: Find another solution through stylizing rather than disabling point-events */
+  /* This makes this overlay (since it's an image) click-throughable */
+  pointer-events: none;
+}
+
+/* Main header */
+header {
+    background-color:  rgb(150, 182, 184);
+    z-index: 2;
+    color: #fff;
+    padding: 5px 30px; /* Only apply padding to top and bottom */
+    font-size: medium;
+    display: flex; /* Add this line */
+    justify-content: space-between; /* Add this line */
+    align-items: center; /* Add this line */
+    /* Add the following properties */
+  }
+
+  /* Simple web icon logo, stylized */
+  .logo {
+  width: 23px; /* Set the width to your desired size */
+  height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Simple web icon logo, made to send to index.html */
+  .logo-link {
+    display: flex;
+  }
+
+
+  .header-content {
+    display: flex;
+    align-items: center;
+  }
+
+/* Navbar main layout */
+nav {
+    background-color: rgb(150, 182, 184);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Layout for linnks in navbar */
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0px 26px;
+  text-decoration: none;
+}
+
+/* Animation for hovering over link in nav bar */
+nav a:hover {
+  background-color:  rgb(150, 182, 184);
+  color: blanchedalmond;
+}
+
+/* Main with main image */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 350px);
+  position: relative;
+  /* background-image: url('https://russellrozenbaum.me/IMG_3928.jpeg'); */
+    background-size: cover;
+    zoom: normal;
+    background-position: 0cap;
+}
+
+
+/* main with aux page format */
+mainAuxPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background-image: url('https://russellrozenbaum.me/IMG_6037.jpeg'); */
+      background-size: cover;
+      zoom: normal;
+      background-position: 0cap;
+  }
+
+  /* header */
+.headerA {
+    display: flex;
+}
+
+/* For main profile image on index.html */
+.profile-image {
+  width: 150px; /* Set the width and height to your desired size */
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid rgb(255, 248, 235); /* Add a white circular border */
+  overflow: hidden; /* Clip the image to the border */
+  box-sizing: border-box; /* Include border in the box model */
+  background-image: url('https://russellrozenbaum.me/IMG_3002_3.jpg'); /* Set the URL of your image */
+  background-size: cover;
+  background-position: center;
+  margin-top: 200px; /* Adjust the margin as needed */
+}
+
+.page-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 115px;
+  position: absolute;
+  color: rgb(255, 248, 235);
+  font-size: 1.05rem;
+  text-align: center;
+  /* To-Do: Find another solution through stylizing rather than disabling point-events */
+  /* This makes this block click-throughable */
+pointer-events: none;
+}
+
+.coding-text {
+  max-width: 800px;
+  padding-top: 700px;
+  color: rgb(255, 248, 235);
+  font-size: 1.8rem;
+  text-align: center;
+  position: absolute;
+  /* To-Do: Find another solution through stylizing rather than disabling point-events */
+  /* This makes this block click-throughable */
+pointer-events: none;
+}
+
+.coding-text-small {
+  max-width: 800px;
+  margin: 0 auto;
+  height: 0px;
+  padding-bottom: 20px;
+  color: rgb(255, 248, 235);
+  font-size: 0.8rem;
+  text-align: center;
+  /* To-Do: Find another solution through stylizing rather than disabling point-events */
+  /* This makes this block click-throughable */
+pointer-events: none;
+}
+
+/* Large container */
+.main-container-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: rgb(255, 248, 235);
+  text-align: center;
+
+  width: 100%;
+  max-width: 1800px;
+  height: 1000px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Small container */
+.main-container-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: rgb(255, 248, 235);
+  font-size: 1.05rem;
+  text-align: center;
+  
+  justify-content: center;
+    width: 100%;
+    max-width: 1800px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  /* Small container */
+.main-container-small-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: rgb(255, 248, 235);
+  font-size: 1.05rem;
+  text-align: center;
+  
+  justify-content: center;
+    width: 100%;
+    max-width: 1800px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  /* A small filler block for spacing out page content */
+  .filler-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+      width: 100%;
+      max-width: 1800px;
+      height: 28px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+/* Bottom section of web-page */
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Quote block, stylized */
+.quote {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Quote block, stylized, lower than original quote */
+.quote2 {
+  font-style: italic;
+  text-align: right;
+  padding: 40px;
+}
+
+/* footer */
+.footer {
+  background-color: rgb(150, 182, 184);
+  color: #000000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* footer elements, offering a symmetric style */
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+}
+
+/* left block of footer */
+.footer-left {
+  text-align: left;
+}
+
+/* center block of footer */
+.footer-center {
+  text-align: center;
+}
+
+/* right block of footer */
+.footer-right {
+  text-align: right;
+}
+
+/* links which will appear in footer */
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* basic stylized of text within footer links */
+.footer-links a {
+  color: #000000;
+  margin-left: 20px;
+}
+
+/* animation for text within footer links */
+.footer-links a:hover {
+  color: blanchedalmond;
+}
+
+/* basic image container */
+.image-container {
+    position: relative;
+  }
+  
+  /* basic image wrapper */
+  .image-wrapper {
+    position: absolute;
+    top: -30px; /* Adjust the vertical position */
+    left: 80px; /* Adjust the horizontal position */
+  }
+
+/* intro section, stylized */
+.intro {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.3rem;
+    font-weight: initial;
+      color: rgb(255, 248, 235);
+    font-family: Bradley Hand, cursive;
+  }
+
+  
+
+  /* interests section, stylized */
+  .interests {
+    list-style-type: lower-roman; /* Remove default list-style-type */
+    padding: 0; /* Remove default padding */
+    position: absolute;
+    top: 114.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    font-weight: initial;
+      color: rgb(255, 248, 235);
+    font-family: Bradley Hand, cursive;
+  }
+
+  /* name on index.html */
+.name {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: initial;
+      color: rgb(255, 248, 235);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    font-family: Bradley Hand, cursive;
+    }
+
+    /* style for displaying current date, a fun little bit of js */
+    .currentDate {
+        position: absolute;
+    top: 129.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.55rem;
+    font-weight: initial;
+      color: rgb(255, 248, 235);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    font-family: Bradley Hand, cursive;
+    }
+
+     /* style for displaying current time, another fun little bit of js */
+.currentTime {
+    position: absolute;
+top: 138%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 1.25rem;
+font-weight: initial;
+  color: rgb(255, 248, 235);
+/* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+font-family: Bradley Hand, cursive;
+}
+
+/* padding for audio segments */
+audio {
+padding-top: 30%;
+}
+
+/* main contaier for audio segments */
+.audio-container {
+  width: 20%;
+  max-width: 400px;
+  padding-right: 2.5%;;
+  padding-top: 100px;
+}
+
+/* Style for the caption */
+.caption {
+    flex: 2; /* Take up remaining space */
+    font-family: Bradley Hand, cursive;
+    font-size: 18px;
+    color: #333;
+    padding-left: 20px; /* Add some space between caption and audio player */
+  }
+
+/* Style for the symbol */
+  .copy-symbol {
+    padding-top: 20%;
+    font-size: 2.4em; /* Adjust the size as needed */
+}
+
+/* Essays */
+.essays {
+    margin-bottom: 40px;
+    margin-left: 40px;
+  }
+  
+  .essay {
+    margin-bottom: 20px;
+  }
+  
+  /* Poems */
+  .poems {
+    margin-bottom: 40px;
+    margin-left: 40px;
+  }
+  
+  .poem {
+    margin-bottom: 20px;
+  }
+  
+  .poem pre {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+  }
+
+  /* Art */
+  .art-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 200px;
+    padding: 20px;
+  }
+  
+  .art-piece {
+    width: 300px; /* Adjust the width as needed */
+    text-align: center;
+  }
+  
+  .art-piece img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .artCaption {
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+
