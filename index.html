@@ -3,7 +3,9 @@
 
 <head>
   <title>Russell Rozenbaum</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 </head>
 
 <body>
@@ -15,7 +17,7 @@
       </a>
       <a href="sounds.html">Sounds</a>
       <a href="coding.html">Coding</a>
-      <a href="writing.html">Writing</a>
+      <!-- <a href="writing.html">Writing</a> -->
       <a href="art.html">Art</a>
     </nav>
     <div class="header-content"></div>
@@ -24,39 +26,39 @@
   </header>
   
   <div class="noise-overlay"></div>
-  <div class="filler-small"></div>
+  
 
   <main>
-    <div class="main-container-large">
-      <div class="intro">hey, i'm</div>
+    <div class="profile">
+      <div id="intro">hey, i'm</div>
       <div class="name">russell rozenbaum</div>
-      <div class="profile-image"></div>
-      <div class="interests"> <li>music lover</li>
-        <li>program crafter</li>
-        <li>avid runner</li></div>
-      <!-- <div class="currentDate"><span id="date"></span></div>
-      <div class="currentTime"><span id="time"></span></div> -->
+      <div id="profile-row"> 
+        <div id="left-col" class="interests">i) music lover</div>
+        <div id="profile-image-container"><div id="profile-image"></div></div>
+        <div id="right-col" class="interests">ii) avid runner</div>
+      </div>
+      <div id="beneath" class="interests">iii) tech crafter
+        <br><br><br><br><br><br><br><br>
+      </div>
     </div>
   </main>
 
-  <div class="main-container-small"></div>
-
-  <footer class="footer">
-    <div class="footer-left">
+  <footer>
+    <span class="footer-left">
       <a href="index.html" class="logo-link">
         <img src="https://russellrozenbaum.me/WebLogo_.png" alt="Logo" class="logo">
       </a>
-    </div>
-    <div class="footer-center">
-      <span class="copy-symbol">&copy;</span> 2024. Russell Rozenbaum
-    </div>
-    <div class="footer-right">
+    </span>
+    <span class="footer-center">
+      <span class="copy-symbol">&copy;</span><span>&nbsp;&nbsp;&nbsp;&nbsp;2024. Russell Rozenbaum</span>
+    </span>
+    <span class="footer-right">
       <div class="footer-links">
-        <a href="#">linkedin</a>
-        <a href="#">github</a>
-        <a href="#">email</a>
+        <a href="https://www.linkedin.com/in/rrozenbaum/" target="_blank">linkedin</a>
+        <a href="https://github.com/russell-rozenbaum" target="_blank">github</a>
+        <a href="mailto:rusrozen@umich.edu" target="_blank">email</a>
       </div>
-    </div>
+    </span>
 </footer>
 
 <script src="file.js"></script>

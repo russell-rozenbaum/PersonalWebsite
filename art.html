@@ -3,56 +3,94 @@
 <head>
   <title>Russell Rozenbaum</title>
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="sounds.html">Sounds</a>
-            <a href="writing.html">Writing</a>
-            <a href="coding.html">Coding</a>
-            <a href="art.html">Art</a>
-        </nav>
-        <h1 class="headerName">RR</h1>
-      </header>
-    
-  <mainArt>
-    <div class="main-container-large">
-      <div class="name">Art</div>
-      <div class="currentTime"><span id="time"></span></div>
-      <div class="currentDate"><span id="date"></span></div>
-      <div class="logo-container"></div>
-    </div>
-  </mainArt>
 
-  <div class="main-container-small">
+<body>
+    
+  <header>
+    <nav>
+      <a href="index.html" class="logo-link">
+        <img src="https://russellrozenbaum.me/WebLogo_.png" alt="Logo" class="logo">
+      </a>
+      <a href="sounds.html">Sounds</a>
+      <a href="coding.html">Coding</a>
+      <!-- <a href="writing.html">Writing</a> -->
+      <a href="art.html">Art</a>
+    </nav>
+    <div class="header-content"></div>
+      <h1 class="headerName">RR</h1>
+    </div>
+  </header>
+
+  <div class="noise-overlay"></div>
+    
+  <main>
+    <div class="profile">
+      <div class="name">Art</div>
+      <div class="page-text">
+        In my free time, I enjoy a few things, one of those being oil<br>
+        painting and drawing. Here's some of my favorite pieces I've<br>
+        created.
+      </div>
     <div class="art-gallery">
       <div class="art-piece">
         <img src="https://russellrozenbaum.me/IMG_4318.jpeg" alt="Artwork 1">
-        <div class="artCaption">Caption for Artwork 1</div>
+        <div class="artCaption">
+          Ocean Sunrise<br>
+          Oil on Canvas<br>
+          July 2023
+        </div>
       </div>
       <div class="art-piece">
         <img src="https://russellrozenbaum.me/TheSunsAwake.jpeg" alt="Artwork 2">
-        <div class="artCaption">Caption for Artwork 2</div>
+        <div class="artCaption">
+          Teacup, Still Life<br>
+          Oil on Canvas<br>
+          June 2021
+        </div>
       </div>
       <div class="art-piece">
         <img src="https://russellrozenbaum.me/IMG_6456.jpeg" alt="Artwork 2">
-        <div class="artCaption">Caption for Artwork 2</div>
+        <div class="artCaption">
+          Plateau in Foreground<br>
+          Oil on Canvas<br>
+          August 2022
+        </div>
       </div>
       <div class="art-piece">
-        <img src="https://russellrozenbaum.me/IMG_3413.jpeg" alt="Artwork 2">
-        <div class="artCaption">Caption for Artwork 2</div>
+        <img src="https://russellrozenbaum.me/IMG_7892.jpeg" alt="Artwork 2">
+        <div class="artCaption">
+          Study<br>
+          Drawing<br>
+          May 2023
+        </div>
       </div>
       <!-- Add more art pieces as needed -->
     </div>
   </div>
+  </main>
 
-  <footer class="footer">
-     <p class="quote"> Anon. </p>
-     <span class="copy-symbol"></span> 2024. Russell Rozenbaum
-  </footer>
+  <footer>
+    <span class="footer-left">
+      <a href="index.html" class="logo-link">
+        <img src="https://russellrozenbaum.me/WebLogo_.png" alt="Logo" class="logo">
+      </a>
+    </span>
+    <span class="footer-center">
+      <span class="copy-symbol">&copy;</span><span>&nbsp;&nbsp;&nbsp;&nbsp;2024. Russell Rozenbaum</span>
+    </span>
+    <span class="footer-right">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/rrozenbaum/" target="_blank">linkedin</a>
+        <a href="https://github.com/russell-rozenbaum" target="_blank">github</a>
+        <a href="mailto:rusrozen@umich.edu" target="_blank">email</a>
+      </div>
+    </span>
+</footer>
+
   <script src="file.js"></script>
 </body>
 </html>
