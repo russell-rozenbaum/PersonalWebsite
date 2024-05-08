@@ -226,7 +226,8 @@ nav a:hover {
     font-family: Bradley Hand, cursive;
   }
 
-  #beneath {
+  
+  #beneath {}
     grid-row: 4;
     display: flex;
     padding-top: 10px;
