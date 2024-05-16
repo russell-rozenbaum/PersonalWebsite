@@ -95,9 +95,25 @@ nav a:hover {
   color: blanchedalmond;
 }
 
+/* Layout for linnks in navbar */
+.interests a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
 
+/* Animation for hovering over link in nav bar */
+.interests a:hover {
+  color: blanchedalmond;
+}
 
+#coding-text a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
 
+#coding-text a:hover {
+  color: blanchedalmond;
+}
 
 
   /* header */
@@ -148,6 +164,14 @@ nav a:hover {
   grid-template-columns: 1fr;
   grid-gap: 20px; 
   margin-top: 50px;
+}
+
+#coding{
+  display: flex;
+}
+
+#sounds{
+  display: flex;
 }
 
 
@@ -207,7 +231,6 @@ nav a:hover {
 
 /* For main profile image on index.html */
 #profile-image {
-  /* Picture formatting */
   width: 150px; 
   height: 150px;
   border-radius: 50%;
@@ -227,7 +250,7 @@ nav a:hover {
   }
 
   
-  #beneath {}
+  #beneath {
     grid-row: 4;
     display: flex;
     padding-top: 10px;

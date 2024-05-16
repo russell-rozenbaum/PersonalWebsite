@@ -29,9 +29,11 @@ function updateTime() {
   // Call the updateTime function initially
   updateTime();
 
-   // Call the updateDate function initially
-   updateDate();
+  // Call the updateDate function initially
+  updateDate();
   
   // Update the time every second
   setInterval(updateTime, 1000);
   setInterval(updateDate, 1000);
+
+
