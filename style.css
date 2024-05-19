@@ -1,5 +1,3 @@
-
-
 /* The body, making up the bulk of each webpage */
 body {
   /* The main font used on the website */
@@ -7,12 +5,12 @@ body {
   font-weight: 600;
 
   /* The main color used on the website */
-  background-color: rgb(150, 182, 184);
+  background-color: rgb(127, 163, 181);
 }
 
 /* Main header */
 header {
-  background-color:  rgb(150, 182, 184);
+  background-color:  rgb(127, 163, 181);
   z-index: 2;
   color: #fff;
   padding: 5px 30px; /* Only apply padding to top and bottom */
@@ -21,6 +19,45 @@ header {
   justify-content: space-between; /* Add this line */
   align-items: center; /* Add this line */
   /* Add the following properties */
+}
+
+/* Simple web icon logo, stylized */
+.logo {
+  width: 23px; /* Set the width to your desired size */
+  height: auto; /* Maintain aspect ratio */
+}
+  
+/* Simple web icon logo, made to send to index.html */
+.logo-link {
+  display: flex;
+}
+  
+  
+.header-content {
+  display: flex;
+  align-items: center;
+}
+  
+/* Navbar main layout */
+nav {
+  background-color: rgb(127, 163, 181);
+  overflow: hidden;
+  text-align: center;
+}
+  
+/* Layout for linnks in navbar */
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0px 26px;
+  text-decoration: none;
+}
+  
+/* Animation for hovering over link in nav bar */
+nav a:hover {
+  background-color:  rgb(127, 163, 181); /*rgb(150, 182, 184);*/
+  color: blanchedalmond;
 }
 
 /* Main with main image */
@@ -42,57 +79,14 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-
   /* Image, stylized */
-  background-image: url(https://russellrozenbaum.me/AdobeStock_263381557.jpeg);
+  background-image: url(https://russellrozenbaum.me/camera_static_texture_by_vroomvro0om_ddl0hax.png);
   background-size: cover;
   background-repeat: repeat;
   opacity: 0.1;
-
   /* To-Do: Find another solution through stylizing rather than disabling point-events */
   /* This makes this overlay (since it's an image) click-throughable */
   pointer-events: none;
-}
-
-
-
-  /* Simple web icon logo, stylized */
-  .logo {
-  width: 23px; /* Set the width to your desired size */
-  height: auto; /* Maintain aspect ratio */
-  }
-
-  /* Simple web icon logo, made to send to index.html */
-  .logo-link {
-    display: flex;
-  }
-
-
-  .header-content {
-    display: flex;
-    align-items: center;
-  }
-
-/* Navbar main layout */
-nav {
-    background-color: rgb(150, 182, 184);
-    overflow: hidden;
-    text-align: center;
-}
-
-/* Layout for linnks in navbar */
-nav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0px 26px;
-  text-decoration: none;
-}
-
-/* Animation for hovering over link in nav bar */
-nav a:hover {
-  background-color:  rgb(150, 182, 184);
-  color: blanchedalmond;
 }
 
 /* Layout for linnks in navbar */
@@ -114,7 +108,6 @@ nav a:hover {
 #coding-text a:hover {
   color: blanchedalmond;
 }
-
 
   /* header */
 .headerA {
@@ -316,7 +309,7 @@ audio {
 
   /* footer */
 footer {
-  background-color: rgb(150, 182, 184);
+  background-color: rgb(127, 163, 181);
   color: #000000;
   padding-top: 200px;
   display: flex;
