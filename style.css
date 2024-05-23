@@ -62,8 +62,8 @@ nav a:hover {
 
 /* Navbar main layout */
 .navbar-name {
-  left: -92px;
-  font-size: 32px;
+  left: -114px;
+  font-size: 40px;
   display: flex;
   position: fixed;
   top: 45vh;
@@ -74,7 +74,7 @@ nav a:hover {
 /* Navbar main layout */
 .navbar-cats {
   display: flex;
-  font-size: 20px;
+  font-size: 24px;
   position: fixed;
   right: 80px;
   top: 12px;
@@ -156,7 +156,6 @@ nav a:hover {
 
   color: rgb(255, 248, 235);
   text-align: center;
-
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -166,9 +165,9 @@ nav a:hover {
 .profile {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 20px; 
+  grid-gap: 20px;
   margin-top: 171px;
-  animation: fade-in 2.5s ease-in forwards;
+  animation: fade-in 2s ease-in forwards;
 }
 
 @keyframes fade-in {
@@ -206,9 +205,9 @@ nav a:hover {
     font-weight: initial;
     color: rgb(255, 248, 235);
     font-family: Bradley Hand, cursive;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-name: fadeIn;
+    animation: fade-in 2s ease-in forwards;
+    opacity: 0;
+    animation-delay: 1s;
 }
 
 #profile-row {
@@ -224,6 +223,9 @@ nav a:hover {
   display: flex;
   padding-top: 65px;
   justify-content: center;
+  animation: fade-in 1s ease-in forwards;
+  opacity: 0;
+  animation-delay: 2s;
 }
 
 #right-col {
@@ -232,6 +234,19 @@ nav a:hover {
   display: flex;
   padding-top: 65px;
   justify-content: center;
+  animation: fade-in 1s ease-in forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
+
+#beneath {
+  grid-row: 4;
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+  animation: fade-in 1s ease-in forwards;
+  opacity: 0;
+  animation-delay: 4s;
 }
 
 #profile-image-container {
@@ -242,8 +257,8 @@ nav a:hover {
 
 /* For main profile image on index.html */
 #profile-image {
-  width: 150px; 
-  height: 150px;
+  width: 200px; 
+  height: 200px;
   border-radius: 50%;
   border: 2.5px solid rgb(255, 248, 235); 
   overflow: hidden; 
@@ -258,14 +273,6 @@ nav a:hover {
     font-weight: initial;
     color: rgb(255, 248, 235);
     font-family: Bradley Hand, cursive;
-  }
-
-  
-  #beneath {
-    grid-row: 4;
-    display: flex;
-    padding-top: 10px;
-    justify-content: center;
   }
 
 /* padding for audio segments */
