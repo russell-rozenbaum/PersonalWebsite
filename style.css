@@ -3,7 +3,7 @@ body {
   /* The main font used on the website */
   font-family: Bradley Hand, cursive;
   /* The main color used on the website */
-  background-color: rgb(127, 163, 181);;
+  background-color: rgb(199, 192, 187);
 }
 
 /* Main with main image */
@@ -219,7 +219,7 @@ nav a:hover {
   grid-column: 1;
   width: 150px;
   display: flex;
-  padding-top: 80px;
+  padding-top: 140px;
   justify-content: center;
   animation: fade-in 1s ease-in forwards;
   opacity: 0;
@@ -230,7 +230,7 @@ nav a:hover {
   grid-column: 3;
   width: 150px;
   display: flex;
-  padding-top: 80px;
+  padding-top: 140px;
   justify-content: center;
   animation: fade-in 1s ease-in forwards;
   opacity: 0;
@@ -255,8 +255,8 @@ nav a:hover {
 
 /* For main profile image on index.html */
 #profile-image {
-  width: 200px; 
-  height: 200px;
+  width: 300px; 
+  height: 300px;
   border-radius: 50%;
   border: 2.5px solid rgb(255, 248, 235); 
   overflow: hidden; 
@@ -334,7 +334,7 @@ audio {
 
   /* footer */
 footer {
-  background-color: rgb(127, 163, 181);
+  background-color: rgb(199, 192, 187);
   color: #000000;
   padding-top: 200px;
   display: flex;
