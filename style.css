@@ -1,9 +1,22 @@
+:root {
+  --background-color: rgb(88, 100, 79);
+  --secondary-background-color: rgb(55, 75, 74);
+  --primary-color: rgb(248, 243, 231);
+  --secondary-color: rgb(234, 222, 195);
+  --black-color: rgb(0, 0, 0);
+  --hover-color: rgb(107, 117, 102);
+  --caption-color: var(--caption-color);
+  --max-width: 1200px;
+  --spacing-unit: 1rem;
+  --font-main: Bradley Hand, cursive;
+}
+
 /* The body, making up the bulk of each webpage */
 body {
   /* The main font used on the website */
   font-family: Bradley Hand, cursive;
   /* The main color used on the website */
-  background-color: rgb(88, 100, 79);
+  background-color: var(--background-color);
 }
 
 /* Main with main image */
@@ -49,7 +62,7 @@ li {
   
 /* Layout for links in navbar */
 nav a {
-  color: #f2f2f2;
+  color: var(--primary-color);
   display: block;
   text-decoration: none;
 }
@@ -74,7 +87,7 @@ nav a:hover {
 /* Navbar main layout */
 .navbar-cats {
   display: flex;
-  font-size: 23px;
+  font-size: 16px;
   position: fixed;
   right: 80px;
   top: 12px;
@@ -89,7 +102,7 @@ nav a:hover {
 
 /* Layout for linnks in navbar */
 .interests a {
-  color: #f2f2f2;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -100,7 +113,7 @@ nav a:hover {
 }
 
 #coding-text a {
-  color: #f2f2f2;
+  color: var(--primary-color);
   text-decoration: none;
   position: relative;
   display: inline-block;
@@ -114,37 +127,37 @@ nav a:hover {
   bottom: 0;
   width: 0;
   height: 1.5px;
-  background-color: #f2f2f2;
+  background-color: var(--primary-color);
   transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 #coding-text a:hover {
-  color: rgb(107, 117, 102);
+  color: var(--hover-color);
   transition: color .3s ease-in-out;
 }
 
 #coding-text a:hover::after {
   width: 100%;
-  background-color: rgb(107, 117, 102);
+  background-color: var(--hover-color);
 }
 
 .page-text {
   max-width: 800px;
-  color: #f2f2f2;
+  color: var(--primary-color);
   font-size: 1.05rem;
   text-align: center;
 }
 
 #coding-text {
   max-width: 800px;
-  color: #f2f2f2;
+  color: var(--primary-color);
   font-size: 1.8rem;
   text-align: center;
 }
 
 #coding-text-small {
   max-width: 800px;
-  color: #f2f2f2;
+  color: var(--primary-color);
   font-size: 0.8rem;
   text-align: center;
 }
@@ -155,7 +168,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
 
-  color: #f2f2f2;
+  color: var(--primary-color);
   text-align: center;
   width: 100%;
   background-size: cover;
@@ -180,11 +193,19 @@ nav a:hover {
   }
 }
 
-#coding{
+#research{
   display: flex;
 }
 
-#sounds{
+#music{
+  display: flex;
+}
+
+#projects{
+  display: flex;
+}
+
+#writing{
   display: flex;
 }
 
@@ -194,7 +215,7 @@ nav a:hover {
     text-align: center;
     font-size: 2.3rem;
     font-weight: initial;
-    color: #f2f2f2;
+    color: var(--primary-color);
     font-family: Bradley Hand, cursive;
   }
 
@@ -202,11 +223,19 @@ nav a:hover {
 .name {
     grid-row: auto;
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.7rem;
     font-weight: initial;
-    color: #f2f2f2;
+    color: var(--secondary-color);
     font-family: Bradley Hand, cursive;
+}
 
+.name-cursor {
+  grid-row: auto;
+  text-align: center;
+  font-size: 3.7rem;
+  font-weight: initial;
+  color: var(--secondary-color);
+  font-family: Bradley Hand, cursive;
 }
 
 #profile-row {
@@ -214,38 +243,66 @@ nav a:hover {
   display: grid;
   grid-gap: 25px;
   grid-template-rows: 1fr;
+  margin-bottom: -125px;
 }
 
 #left-col {
   grid-column: 1;
-  width: 150px;
+  width: 65px;
   display: flex;
-  padding-top: 195px;
+  padding-top: 115px;
   justify-content: center;
   animation: fade-in 1s ease-in forwards;
   opacity: 0;
-  animation-delay: 1.25s;
+  animation-delay: .5s;
 }
 
 #right-col {
   grid-column: 3;
-  width: 150px;
+  width: 65px;
   display: flex;
-  padding-top: 195px;
+  padding-top: 115px;
   justify-content: center;
   animation: fade-in 1s ease-in forwards;
   opacity: 0;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
-#beneath {
+.beneath {
   grid-row: 4;
-  display: flex;
-  padding-top: 10px;
+  display: grid;
+  grid-gap: 425px;
+  margin-bottom: 50px;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  margin-bottom: -250px;
+}
+
+#beneath-left {
+  grid-column: 1;
   justify-content: center;
   animation: fade-in 1s ease-in forwards;
   opacity: 0;
-  animation-delay: 2.75s;
+  animation-delay: 1.33s;
+}
+
+#beneath-right {
+  grid-column: 2;
+  justify-content: center;
+  animation: fade-in 1s ease-in forwards;
+  opacity: 0;
+  animation-delay: 1.58s;
+}
+
+#beneath-center {
+  grid-column: 1 / span 2;
+  justify-content: center;
+  position: relative;
+  top: -300px; /* Adjust as needed */
+  text-align: center;
+  animation: fade-in 1s ease-in forwards;
+  opacity: 0;
+  animation-delay: 1.75s;
 }
 
 #profile-image-container {
@@ -259,24 +316,89 @@ nav a:hover {
   width: 400px; 
   height: 400px;
   border-radius: 50%;
-  border: 2.5px solid #f2f2f2;
+  border: 2.5px solid var(--primary-color);
   overflow: hidden; 
   box-sizing: border-box; 
   background-image: url('images/IMG_9730.JPG'); 
   background-size: cover;
 }
 
-  /* interests section, stylized */
-  .interests {
-    font-size: 1.25rem;
-    font-weight: initial;
-    color: #f2f2f2;
-    font-family: Bradley Hand, cursive;
-  }
+/* interests section, stylized */
+.interests {
+font-size: 1.25rem;
+font-weight: initial;
+color: var(--primary-color);
+font-family: Bradley Hand, cursive;
+}
 
-/* padding for audio segments */
-audio {
+.section-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px; /* Space between text and image */
+}
+
+.section-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.section-image {
+  flex: 0 0 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Added to contain absolute positioning */
+}
+
+.hazel-logo {
+  width: 130px;
+  height: 130px;
+  position: relative; /* Added to establish positioning context */
+}
+
+.animated-eyes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.eye {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transition: transform 0.1s ease-out;
+}
+
+.eye img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Adjusted positions to match the white sockets in the Hazel logo */
+.left-eye {
+  left: 30%;  /* Positioned to match left eye socket */
+  top: 57%;   /* Positioned to match vertical alignment */
+}
+
+.right-eye {
+  left: 62%;  /* Positioned to match right eye socket */
+  top: 57%;   /* Positioned to match vertical alignment */
+}
+
+.kashmir-logo {
+  width: 130px;  
+  height: 130px;
+  object-fit: contain; 
+}
+
+audio {
+justify-content: center;
 }
 
 /* main contaier for audio segments */
@@ -296,7 +418,7 @@ audio {
     flex: 2; /* Take up remaining space */
     font-family: Bradley Hand, cursive;
     font-size: 18px;
-    color: #333;
+    color: var(--caption-color);
     padding-top: 10px;
   }
 
@@ -335,8 +457,8 @@ audio {
 
   /* footer */
 footer {
-  background-color: rgb(181, 187, 179);
-  color: #000000;
+  background-color: var(--hover-color);
+  color: var(--black-color);
   margin-top: 100px;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -374,11 +496,11 @@ footer {
 
 /* basic stylized of text within footer links */
 .footer-links a {
-  color: #000000;
+  color: var(--black-color);
   margin-left: 20px;
 }
 
 /* animation for text within footer links */
 .footer-links a:hover {
-  color: rgb(107, 117, 102);
+  color: var(--black-color);
 }
