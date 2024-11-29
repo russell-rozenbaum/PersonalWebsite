@@ -148,6 +148,10 @@ nav a:hover {
   text-align: center;
 }
 
+.page-text a::after {
+  content: none !important;
+}
+
 #coding-text {
   max-width: 800px;
   color: var(--primary-color);
@@ -398,6 +402,12 @@ font-family: Bradley Hand, cursive;
   width: 130px;  
   height: 130px;
   object-fit: contain; 
+}
+
+.percept-logo {
+  width: 350px;  
+  height: 350px;
+  object-fit: contain;
 }
 
 audio {
