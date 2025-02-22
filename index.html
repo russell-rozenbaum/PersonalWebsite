@@ -9,7 +9,14 @@
   <link rel="icon" type="image/svg+xml" href="images/rose-svgrepo-com.svg">
 </head>
 
-<body>
+<body class="theme-forest">
+
+  <div class="theme-selector">
+    <div class="theme-button theme-button-light" data-theme="light" title="Light theme"></div>
+    <div class="theme-button theme-button-sandstone" data-theme="sandstone" title="Sandstone theme"></div>
+    <div class="theme-button theme-button-forest active" data-theme="forest" title="Forest theme"></div>
+    <div class="theme-button theme-button-dark" data-theme="dark" title="Dark theme"></div>
+  </div>
 
   <nav>
     <ul class="navbar-name"> 
@@ -41,22 +48,37 @@
       <div class="name"></div>
       <div id="profile-row"> 
         <div id="left-col" class="interests">
-          <a href="#research">work</a>
+          <a href="#bio">bio</a>
         </div>
         <div id="profile-image-container"><div id="profile-image"></div></div>
         <div id="right-col" class="interests">
-          <a href="#projects">projects</a></div>
+          <a href="#research">work</a></div>
       </div>
       <div class="beneath">
         <div id="beneath-left" class="interests">
-          <a href="#music">music</a>
+          <a href="#projects">projects</a>
         </div>
         <div id="beneath-right" class="interests">
-          <a href="#field-recs">sounds</a>
+          <a href="#music">music</a>
         </div>
         <div id="beneath-center" class="interests">
           <a href="#writing">writing</a>
         </div>
+      </div>
+    </div>
+
+    <div class="profile">
+      <div id="bio"></div>
+      <div class="name">Bio</div>
+      <div class="bio-text">
+        I'm a senior at the University of Michigan, majoring in computer science <br>
+        and minoring in music. My research interests lie largely in AI and type theory, <br>
+        along with the intersect between them.<br>
+        <br>
+        In particular, I am looking into the effects of high-level action commands used in <br>
+        LLM-based agents developed for program synthesis. <br>
+        <br>
+        In my freetime, I enjoy going to the gym, cooking, and making music (piano, beats, etc)! <br>
       </div>
     </div>
 
@@ -75,7 +97,11 @@
           Future of Programming Lab </a>
         <br>
         <div class="page-text">
-          Made several features editable within Hazel's exercise mode <br>
+          I started off with the FP Lab, led by Prof. Cyrus Omar, focusing on making Hazel's
+          exercise mode more editable. <br>
+          I'm now focused on writing a senior
+          thesis on the effects of high-level action commands used in LLM-based agents developed 
+          for program synthesis.
         </div>
         <br><br>
       </div>
@@ -107,8 +133,11 @@
         Kashmir Wildlife Foundation</a>
       <br>
       <div class="page-text">
-        Researching and developing bird classification pipeline with an <br>
-        emphasis on counter-poaching and ecosystem health
+        As a part of KWF's AI team and BioAcoustics project, we focus on researching state-of-the-art
+        techniques for audio data processing, bird classification, and general machine learning methods. 
+        We are developing upon this rapidly growing frontier, and designing, building, and testing
+        an architecture to be deployed on edge devices for the use in counter-poaching efforts,
+        specifically in Costa Rica's Osa Peninsula.
       </div>
       <br><br>
     </div>
@@ -292,6 +321,12 @@
     <a href="https://medium.com/@rjrozenbaum" target="">
      Medium</a>
      <div class="page-text">
+      <br><br><br>
+
+     </div>
+     <a href="poems.html" target="">
+      Poems for a Thought</a>
+      <div class="page-text">
        
      </div>
     <br><br>
@@ -326,6 +361,7 @@
 <!-- <script src="js/glider.js"></script> -->
 <script src="js/circle-nav.js"></script>
 <script src="js/hazel-eyes.js"></script>
+<script type="text/javascript" src="js/themes.js"></script>
 
 </body>
 

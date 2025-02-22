@@ -11,12 +11,13 @@
   --font-main: Bradley Hand, cursive;
 }
 
-/* The body, making up the bulk of each webpage */
+/* Apply forest theme by default to body */
 body {
   /* The main font used on the website */
   font-family: Bradley Hand, cursive;
   /* The main color used on the website */
   background-color: var(--background-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Main with main image */
@@ -146,6 +147,14 @@ nav a:hover {
   color: var(--primary-color);
   font-size: 1.05rem;
   text-align: center;
+}
+
+.bio-text {
+  max-width: 800px;
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  text-align: center;
+  font-family: Time;
 }
 
 .page-text a::after {
@@ -516,4 +525,161 @@ footer {
 /* animation for text within footer links */
 .footer-links a:hover {
   color: var(--black-color);
+}
+
+/* Poem Page Styling*/ 
+
+.poem-name {
+  margin-top: 100px;
+  font-family: 'Times New Roman', Times, serif !important;
+  margin-bottom: 120px;
+  grid-row: auto;
+  text-align: center;
+  font-size: 3.7rem;
+  font-weight: initial;
+  color: var(--secondary-color);
+  font-family: Bradley Hand, cursive;
+}
+
+.poem-container {
+  font-family: 'Times New Roman', Times, serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.poem {
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 120px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.poem-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.poem-date {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.poem-content {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.back-to-home {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.back-to-home a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.back-to-home a:hover {
+  color: var(--hover-color);
+  transition: color .3s ease-in-out;
+}
+
+/* Theme variables */
+.theme-light {
+  --background-color: rgb(245, 245, 245);
+  --secondary-background-color: rgb(220, 220, 220);
+  --primary-color: rgb(70, 70, 70);
+  --secondary-color: rgb(100, 100, 100);
+  --black-color: rgb(40, 40, 40);
+  --hover-color: rgb(180, 180, 180);
+  --caption-color: var(--primary-color);
+}
+
+.theme-sandstone {
+  --background-color: rgb(237, 224, 206);  /* Soft sand color */
+  --secondary-background-color: rgb(214, 196, 171);  /* Darker sand */
+  --primary-color: rgb(103, 87, 71);  /* Rich sandstone */
+  --secondary-color: rgb(189, 158, 122);  /* Warm sand */
+  --black-color: rgb(40, 40, 40);  /* Deep brown */
+  --hover-color: rgb(226, 208, 184);  /* Light sand */
+  --caption-color: var(--primary-color);
+}
+
+.theme-forest {
+  --background-color: rgb(88, 100, 79);
+  --secondary-background-color: rgb(55, 75, 74);
+  --primary-color: rgb(248, 243, 231);
+  --secondary-color: rgb(234, 222, 195);
+  --black-color: rgb(0, 0, 0);
+  --hover-color: rgb(107, 117, 102);
+  --caption-color: var(--primary-color);
+}
+
+.theme-dark {
+  --background-color: rgb(15, 23, 42);
+  --secondary-background-color: rgb(30, 41, 59);
+  --primary-color: rgb(226, 232, 240);
+  --secondary-color: rgb(203, 213, 225);
+  --black-color: rgb(255, 255, 255);
+  --hover-color: rgb(51, 65, 85);
+  --caption-color: var(--primary-color);
+}
+
+/* Theme selector styles */
+.theme-selector {
+  position: fixed;
+  top: 25px;
+  left: 50px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+}
+
+.theme-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.theme-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-button.active {
+  transform: scale(0.9);
+  border-width: 3px;
+}
+
+.theme-button-light {
+  background-color: rgb(245, 245, 245);
+}
+
+.theme-button-sandstone {
+  background-color: rgb(237, 224, 206);
+}
+
+.theme-button-forest {
+  background-color: rgb(88, 100, 79);
+}
+
+.theme-button-dark {
+  background-color: rgb(15, 23, 42);
 }
