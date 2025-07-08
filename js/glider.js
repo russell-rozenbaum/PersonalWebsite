@@ -150,7 +150,8 @@ class GameGrid {
 
     handleClick = (event) => {
         if (!this.isActive) return;
-        const baseX = Math.floor(event.clientX / TOTAL_CELL_SIZE) * TOTAL_CELL_SIZE;
+        const mainRect = document.querySelector('main').getBoundingClientRect();
+        const baseX = Math.floor((event.clientX - mainRect.left) / TOTAL_CELL_SIZE) * TOTAL_CELL_SIZE;
         const baseY = Math.floor((event.clientY + window.scrollY) / TOTAL_CELL_SIZE) * TOTAL_CELL_SIZE;
         
         const patternIndex = Math.floor(Math.random() * GLIDER_PATTERNS.length);
