@@ -1,0 +1,54 @@
+:root {
+  /* Design System Variables */
+  --max-width: 1200px;
+  --spacing-unit: 1rem;
+  --font-main: Bradley Hand, cursive;
+  --font-secondary: 'Times New Roman', Times, serif;
+  --border-radius: 25px;
+  --transition-speed: 0.3s;
+  
+  /* Default Theme (Sandstone) */
+  --background-color: rgb(237, 224, 206);  /* Soft sand color */
+  --secondary-background-color: rgb(214, 196, 171);  /* Darker sand */
+  --primary-color: rgb(103, 87, 71);  /* Rich sandstone */
+  --secondary-color: rgb(189, 158, 122);  /* Warm sand */
+  --black-color: rgb(40, 40, 40);  /* Deep brown */
+  --hover-color: rgb(226, 208, 184);  /* Light sand */
+  --caption-color: var(--primary-color);
+  
+  /* Theme Button Colors */
+  --theme-button-sandstone: rgb(237, 224, 206);
+  --theme-button-charcoal-coffee: rgb(72, 65, 65);
+  
+  /* Cross-theme color references for Conway cells */
+  --sandstone-primary-color: rgb(103, 87, 71);
+  --charcoal-primary-color: rgb(236, 228, 217);
+  
+  /* Overlay and Effects */
+  --overlay-opacity: 0.1;
+  --backdrop-blur: 5px;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --border-opacity: 0.5;
+}
+
+/* Sandstone Theme */
+.theme-sandstone {
+  --background-color: rgb(237, 224, 206);  /* Soft sand color */
+  --secondary-background-color: rgb(214, 196, 171);  /* Darker sand */
+  --primary-color: rgb(103, 87, 71);  /* Rich sandstone */
+  --secondary-color: rgb(189, 158, 122);  /* Warm sand */
+  --black-color: rgb(40, 40, 40);  /* Deep brown */
+  --hover-color: rgb(226, 208, 184);  /* Light sand */
+  --caption-color: var(--primary-color);
+}
+
+/* Charcoal Coffee Theme */
+.theme-charcoal-coffee {
+  --background-color: rgb(75, 68, 67);  /* Warm charcoal base */
+  --secondary-background-color: rgb(58, 52, 51);  /* Darker roasted charcoal */
+  --primary-color: rgb(236, 228, 217);  /* Creamy latte */
+  --secondary-color: rgb(205, 183, 165);  /* Coffee with cream */
+  --black-color: rgb(45, 40, 38);  /* Deep roasted charcoal */
+  --hover-color: rgb(98, 89, 87);  /* Lighter warm charcoal */
+  --caption-color: var(--primary-color);
+}

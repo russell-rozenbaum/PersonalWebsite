@@ -1,0 +1,640 @@
+/* Apply forest theme by default to body */
+body {
+  /* The main font used on the website */
+  font-family: Bradley Hand, cursive;
+  /* The main color used on the website */
+  background-color: var(--background-color);
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+/* Main with main image */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  zoom: normal;
+}
+
+/* A grain-like overlay lied over entire website to add texture */
+.noise-overlay {
+  /* Positioning */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Image, stylized */
+  /* background-image: url(images/camera_static_texture_by_vroomvro0om_ddl0hax.png); */
+  background-size: cover;
+  background-repeat: repeat;
+  opacity: 0.1;
+  /* To-Do: Find another solution through stylizing rather than disabling point-events */
+  /* This makes this overlay (since it's an image) click-throughable */
+  pointer-events: none;
+}
+  
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+li {
+  list-style: none;
+}
+  
+/* Layout for links in navbar */
+nav a {
+  color: var(--primary-color);
+  display: block;
+  text-decoration: none;
+}
+  
+/* Animation for hovering over link in nav bar */
+nav a:hover {
+  color: var(--hover-color);
+  transition: color var(--transition-speed) ease;
+}
+
+/* Navbar main layout */
+.navbar-name {
+  left: -114px;
+  font-size: 40px;
+  display: flex;
+  position: fixed;
+  top: 45vh;
+  transform: rotate(270deg);
+  z-index: 3;
+}
+
+/* Navbar main layout */
+.navbar-cats {
+  display: flex;
+  font-size: 16px;
+  position: fixed;
+  right: 80px;
+  top: 12px;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+}
+
+/* Navbar main layout */
+.navbar-cats a {
+  margin: 20px;
+}
+
+/* Layout for linnks in navbar */
+.interests a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Animation for hovering over link in nav bar */
+.interests a:hover {
+  color: var(--hover-color);
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+#coding-text a {
+  color: var(--primary-color);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+#coding-text a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--primary-color);
+  transition: width var(--transition-speed) ease-in-out, background-color var(--transition-speed) ease-in-out;
+}
+
+#coding-text a:hover {
+  color: var(--hover-color);
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+#coding-text a:hover::after {
+  width: 100%;
+  background-color: var(--hover-color);
+}
+
+.page-text {
+  max-width: 800px;
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.bio-text {
+  max-width: 800px;
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  text-align: center;
+  font-family: Time;
+}
+
+.page-text a::after {
+  content: none !important;
+}
+
+#coding-text {
+  max-width: 800px;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#coding-text-small {
+  max-width: 800px;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Large container */
+.container-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  text-align: center;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  margin-top: 80px;
+  animation: fade-in 2s ease-in forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#work{
+  display: flex;
+}
+
+#projects{
+  display: flex;
+}
+
+#music{
+  display: flex;
+}
+
+#field-recs{
+  display: flex;
+}
+
+#writing{
+  display: flex;
+}
+
+/* Circular Navigation System */
+.circular-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  margin: 40px 0;
+  --nav-radius: 110px; /* Distance from center to nav links */
+}
+
+.nav-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  font-weight: initial;
+  color: var(--primary-color);
+  font-family: Bradley Hand, cursive;
+  animation: fade-in 1s ease-in forwards;
+  opacity: 0;
+  /* Remove width/height for minimalism */
+}
+
+.nav-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+.nav-link a:hover {
+  color: var(--hover-color);
+}
+
+/* Position navigation links around the circle at 12, 3, 6, and 9 o'clock */
+.nav-top {
+  /* 0deg (top) */
+  transform: translate(-50%, -50%) rotate(0deg) translateY(calc(-1.2 * var(--nav-radius)));
+  animation-delay: 0.5s;
+}
+
+.nav-right {
+  /* 90deg (right) */
+  transform: translate(-50%, -50%) rotate(90deg) translateY(calc(-1.2 * var(--nav-radius)));
+  animation-delay: 1s;
+}
+
+.nav-bottom {
+  /* 180deg (bottom) */
+  transform: translate(-50%, -50%) rotate(180deg) translateY(calc(-1.2 * var(--nav-radius)));
+  animation-delay: 1.5s;
+}
+
+.nav-left {
+  /* 270deg (left) */
+  transform: translate(-50%, -50%) rotate(270deg) translateY(calc(-1.2 * var(--nav-radius)));
+  animation-delay: 2s;
+}
+
+.profile-image-container {
+  position: relative;
+  z-index: 1;
+  animation: fade-in 1s ease-in forwards;
+  opacity: 0;
+  animation-delay: 0.25s;
+}
+
+/* For main profile image on index.html */
+#profile-image {
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%;
+  border: 2.5px solid var(--primary-color);
+  overflow: hidden; 
+  box-sizing: border-box; 
+  background-image: url("../images/pfp.jpeg");
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+#profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* interests section, stylized - keeping for other uses */
+.interests {
+font-size: 1.25rem;
+font-weight: initial;
+color: var(--primary-color);
+font-family: Bradley Hand, cursive;
+}
+
+.section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px; /* Space between text and image */
+}
+
+.section-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.section-image {
+  flex: 0 0 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Added to contain absolute positioning */
+}
+
+.hazel-logo {
+  width: 130px;
+  height: 130px;
+  position: relative; /* Added to establish positioning context */
+}
+
+.animated-eyes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.eye {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transition: transform 0.1s ease-out;
+}
+
+.eye img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Adjusted positions for the eyes */
+.left-eye {
+  left: 30%;  /* Positioned to match left eye socket */
+  top: 57%;   /* Positioned to match vertical alignment */
+}
+
+.right-eye {
+  left: 62%;  /* Positioned to match right eye socket */
+  top: 57%;   /* Positioned to match vertical alignment */
+}
+
+.kashmir-logo {
+  width: 130px;  
+  height: 130px;
+  object-fit: contain; 
+}
+
+.percept-logo {
+  width: 350px;  
+  height: 350px;
+  object-fit: contain;
+}
+
+audio {
+justify-content: center;
+}
+
+/* main contaier for audio segments */
+.audio-grid {
+  display: grid;
+  grid-gap: 60px;
+  margin-top: 60px;
+  width: 20%;
+  max-width: 400px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Style for the caption */
+.caption {
+    flex: 2; /* Take up remaining space */
+    font-family: Bradley Hand, cursive;
+    font-size: 18px;
+    color: var(--caption-color);
+    padding-top: 10px;
+  }
+
+/* Style for the symbol */
+  .copy-symbol {
+    font-size: 4.5ch; /* Adjust the size as needed */
+    position:absolute;
+}
+
+  /* Art */
+  .art-gallery {
+    display: grid;
+    /* two equal columns */
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 80px; 
+    justify-items: center;
+    padding-top: 40px;
+  }
+  
+  .art-piece {
+    width: 300px; /* Adjust the width as needed */
+    text-align: center;
+    font-family: Bradley Hand, cursive;
+    font-size: 18px;
+    color: var(--caption-color);
+    text-decoration: none;
+  }
+  
+  .art-piece img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .art-caption {
+    margin-top: 10px;
+  }
+
+  /* footer */
+footer {
+  background-color: var(--hover-color);
+  color: var(--black-color);
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+
+/* left block of footer */
+.footer-left {
+  flex: 1;
+  text-align: left;
+  float: left;
+  padding-left: 50px;
+}
+
+/* center block of footer */
+.footer-center {
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  float: center;
+}
+
+/* right block of footer */
+.footer-right {
+  flex: 1;
+  text-align: right;
+  float: right;
+  padding-right: 50px;
+}
+
+/* links which will appear in footer */
+.footer-links {
+  text-align: right;
+}
+
+/* basic stylized of text within footer links */
+.footer-links a {
+  color: var(--black-color);
+  margin-left: 20px;
+}
+
+/* animation for text within footer links */
+.footer-links a:hover {
+  color: var(--black-color);
+}
+
+/* Poem Page Styling*/ 
+
+.poem-name {
+  margin-top: 100px;
+  font-family: 'Times New Roman', Times, serif !important;
+  margin-bottom: 120px;
+  grid-row: auto;
+  text-align: center;
+  font-size: 3.7rem;
+  font-weight: initial;
+  color: var(--secondary-color);
+  font-family: Bradley Hand, cursive;
+}
+
+.poem-container {
+  font-family: 'Times New Roman', Times, serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.poem {
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 120px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.poem-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.poem-date {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.poem-content {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.back-to-home {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.back-to-home a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.back-to-home a:hover {
+  color: var(--hover-color);
+  transition: color var(--transition-speed) ease-in-out;
+}
+
+
+
+/* Theme selector styles */
+.theme-selector {
+  position: fixed;
+  top: 25px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+  transition: opacity 0.3s ease;
+}
+
+.theme-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s ease;
+}
+
+.theme-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.theme-button.active {
+  transform: scale(0.9);
+  border-width: 3px;
+}
+
+/* Theme-specific button colors */
+.theme-button[data-theme="sandstone"] {
+  background-color: var(--theme-button-sandstone);
+}
+
+.theme-button[data-theme="charcoal-coffee"] {
+  background-color: var(--theme-button-charcoal-coffee);
+}
+
+.thesis-diagram {
+  width: 300px;  /* Larger width */
+  height: auto;  /* Maintain aspect ratio */
+  object-fit: contain;
+  margin-left: 20px; /* Add some spacing from the text */
+}
+
+/* Conway Toggle Button */
+#conway-toggle {
+  position: absolute;
+  rotate: 90deg;
+  left: 150px;
+  color: var(--primary-color);
+  font-family: var(--font-main);
+  font-size: 1.0rem;
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--transition-speed) ease;
+  z-index: 1000;
+}
+
+#conway-toggle:hover {
+  color: var(--hover-color);
+}
+
+.theme-toggle {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+.theme-toggle:hover {
+  background: none;
+  box-shadow: none;
+}
