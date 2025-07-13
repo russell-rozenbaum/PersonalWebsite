@@ -12,6 +12,7 @@
   --secondary-background-color: rgb(214, 196, 171);  /* Darker sand */
   --primary-color: rgb(103, 87, 71);  /* Rich sandstone */
   --secondary-color: rgb(189, 158, 122);  /* Warm sand */
+  --tertiary-color: rgb(61, 39, 19); 
   --black-color: rgb(40, 40, 40);  /* Deep brown */
   --hover-color: rgb(226, 208, 184);  /* Light sand */
   --caption-color: var(--primary-color);
@@ -37,6 +38,7 @@
   --secondary-background-color: rgb(214, 196, 171);  /* Darker sand */
   --primary-color: rgb(103, 87, 71);  /* Rich sandstone */
   --secondary-color: rgb(189, 158, 122);  /* Warm sand */
+  --tertiary-color: rgb(181, 168, 154);
   --black-color: rgb(40, 40, 40);  /* Deep brown */
   --hover-color: rgb(226, 208, 184);  /* Light sand */
   --caption-color: var(--primary-color);
@@ -48,7 +50,8 @@
   --secondary-background-color: rgb(58, 52, 51);  /* Darker roasted charcoal */
   --primary-color: rgb(236, 228, 217);  /* Creamy latte */
   --secondary-color: rgb(205, 183, 165);  /* Coffee with cream */
+  --tertiary-color: rgb(181, 168, 154);
   --black-color: rgb(45, 40, 38);  /* Deep roasted charcoal */
-  --hover-color: rgb(98, 89, 87);  /* Lighter warm charcoal */
+  --hover-color: rgb(161, 151, 149);  /* Lighter warm charcoal */
   --caption-color: var(--primary-color);
 }

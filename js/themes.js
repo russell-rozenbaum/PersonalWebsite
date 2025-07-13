@@ -32,6 +32,16 @@ function setTheme(themeName) {
     console.debug(`Updated theme button to: ${themeName}`);
   }
 
+  // Update the Hazelbot SVG based on theme
+  const hazelLogo = document.getElementById('hazel-logo');
+  if (hazelLogo) {
+    if (themeName === 'sandstone') {
+      hazelLogo.src = 'images/hazelbot_dark.svg';
+    } else if (themeName === 'charcoal-coffee') {
+      hazelLogo.src = 'images/hazelbot_light.svg';
+    }
+  }
+
   // Save theme preference
   localStorage.setItem('preferred-theme', themeName);
   console.debug('Saved theme preference to localStorage');
@@ -51,12 +61,12 @@ function cycleToNextTheme() {
 document.addEventListener('DOMContentLoaded', () => {
   //console.debug('DOM Content Loaded - Initializing theme selector');
   
-  // Set default theme from localStorage or default to sandstone
-  const savedTheme = localStorage.getItem('preferred-theme') || 'sandstone';
+  // Set default theme from localStorage or default to charcoal-coffee
+  const savedTheme = localStorage.getItem('preferred-theme') || 'charcoal-coffee';
   //console.debug(`Retrieved saved theme: ${savedTheme}`);
   
-  // Apply the sandstone theme class to body by default
-  document.body.classList.add('theme-sandstone');
+  // Apply the charcoal-coffee theme class to body by default
+  document.body.classList.add('theme-charcoal-coffee');
   
   setTheme(savedTheme);
 
