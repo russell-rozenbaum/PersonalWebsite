@@ -226,26 +226,6 @@ nav a:hover {
   }
 }
 
-#work{
-  display: flex;
-}
-
-#projects{
-  display: flex;
-}
-
-#music{
-  display: flex;
-}
-
-#field-recs{
-  display: flex;
-}
-
-#writing{
-  display: flex;
-}
-
 /* Circular Navigation System */
 .circular-nav {
   position: relative;
