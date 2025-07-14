@@ -48,7 +48,7 @@ function setTheme(themeName) {
 }
 
 function cycleToNextTheme() {
-  const currentTheme = localStorage.getItem('preferred-theme') || 'sandstone';
+  const currentTheme = localStorage.getItem('preferred-theme') || 'charcoal-coffee';
   const currentIndex = themes.indexOf(currentTheme);
   const nextIndex = (currentIndex + 1) % themes.length;
   const nextTheme = themes[nextIndex];
