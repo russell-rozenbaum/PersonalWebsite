@@ -450,14 +450,14 @@ justify-content: center;
   .art-gallery {
     display: grid;
     /* two equal columns */
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     grid-gap: 80px; 
     justify-items: center;
     padding-top: 40px;
   }
   
   .art-piece {
-    width: 300px; /* Adjust the width as needed */
+    width: 200px; 
     text-align: center;
     font-family: Bradley Hand, cursive;
     font-size: 18px;
