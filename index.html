@@ -3,14 +3,20 @@
 
 <head>
   <title>Russell Rozenbaum</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style/variables.css">
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="reset.css?v=2">
+  <link rel="stylesheet" href="style/variables.css?v=2">
+  <link rel="stylesheet" href="style/style.css?v=2">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="images/rose-svgrepo-com.svg">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('preferred-theme') || 'charcoal-coffee';
+      document.documentElement.classList.add('theme-' + saved);
+    })();
+  </script>
 </head>
 
-<body class="theme-charcoal-coffee">
+<body>
 
   <div class="theme-selector">
     <div class="theme-button" id="single-theme-button" title="Click to change theme"></div>
@@ -34,7 +40,7 @@
       <li>
         <a href="mailto:rusrozen@umich.edu" target="_blank">Email</a>
       </li>
-      <li></li>
+      <li>
         <a href="https://drive.google.com/file/d/1CqQBPEh_U-QXE0q7O66a7LfW8UIi0HXL/view?usp=sharing" target="_blank">Resume</a>
       </li>
     </ul>
@@ -166,7 +172,10 @@
         <a href="https://github.com/russell-rozenbaum/GrandmasTapeMachine" target="_blank">Tape Machine</a>
       </div>
       <div class="subsection-content">
-        <p>An wonky tape machine with obscure random audio effects, made using Max/MSP and Processing.</p>
+        <p>A wonky tape machine with obscure random audio effects. The audio effects were made using Max/MSP.
+        The user interface is a culmination of Processing and some Figma design.
+        The main concept was to build a tape machine emulator, with an emphasis on randomization and modulation.
+        Inspired largely by the interesting effects I have found when automating delay, stereo image, and other plugin parameters when making music in a DAW.</p>
       </div>
     </div>
   </div>
@@ -192,32 +201,7 @@
       </div>
     </div>
   </div>
-  <div class="subsection">
-    <div class="subsection-container">
-      <div class="subsection-header">July 2024</div>
-      <div class="subsection-title">
-        <a href="https://github.com/russell-rozenbaum/PolarSortingVisualizer" target="_blank">Polar Sorting Visualizer</a>
-      </div>
-      <div class="subsection-content">
-        <p>Ever wondered what those addictive sorting algorithm visualizations on youtube would look like with polar coordinates? No? Well here it is anyways :)</p>
-      </div>
-    </div>
-  </div>
-  <div class="subsection">
-    <div class="subsection-container">
-      <div class="subsection-header">June 2024</div>
-      <div class="subsection-title">
-        <a href="https://russell-rozenbaum.github.io/MusicByCGOL/" target="_blank">Music by Conway's Game of Life</a>
-      </div>
-      <div class="subsection-content">
-        <p>A fun twist on the original Conway's Game of Life with the added ability to change musical scales, tempo, and for living cells to play notes.</p>
-      </div>
-    </div>
-  </div>
 </section>
-
-
-
 
 
 
@@ -333,38 +317,6 @@
   </div>
 
 
-<!--
-<div class="profile">
-  <div id="writing"></div>
-  <div class="name">Writing</div>
-  <div class="page-text">
-    Sometimes I write <br>
- </div>
- <div id="coding-text">
-   <br><br>
-
-    <div id="coding-text-small">
-     
-    </div>
-    <a href="https://medium.com/@rjrozenbaum" target="">
-     Medium</a>
-     <div class="page-text">
-      <br><br><br>
-
-     </div>
-     <a href="poems.html" target="">
-      Poems for a Thought</a>
-      <div class="page-text">
-       
-     </div>
-    <br><br>
-</div>
-</div>
--->
-
-
-
-
 </main>
 
   <footer>
@@ -385,10 +337,9 @@
     </span>
 </footer>
 
-<script src="js/fade.js"></script>
-<script src="js/glider.js"></script>
-<!-- <script src="js/hazel-eyes.js"></script> -->
-<script type="text/javascript" src="js/themes.js"></script>
+<script src="js/fade.js?v=2"></script>
+<script src="js/glider.js?v=2"></script>
+<script src="js/themes.js?v=2"></script>
 
 <script>
 function openVideoFullscreen() {

@@ -3,17 +3,20 @@
 
 <head>
   <title>Poems | Russell Rozenbaum</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style/variables.css">
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="reset.css?v=2">
+  <link rel="stylesheet" href="style/variables.css?v=2">
+  <link rel="stylesheet" href="style/style.css?v=2">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="images/rose-svgrepo-com.svg">
-  <style>
-    
-  </style>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('preferred-theme') || 'charcoal-coffee';
+      document.documentElement.classList.add('theme-' + saved);
+    })();
+  </script>
 </head>
 
-<body class="theme-sandstone">
+<body>
   <div class="theme-selector">
     <div class="theme-button" id="single-theme-button" title="Click to change theme"></div>
   </div>
@@ -338,8 +341,8 @@ And chirp.
     </span>
   </footer>
 
-  <script src="js/fade.js"></script>
-  <script type="text/javascript" src="js/themes.js"></script>
+  <script src="js/fade.js?v=2"></script>
+  <script src="js/themes.js?v=2"></script>
 </body>
 
 </html>

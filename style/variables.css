@@ -1,57 +1,47 @@
 :root {
-  /* Design System Variables */
+  /* Design system */
   --max-width: 1200px;
   --spacing-unit: 1rem;
-  --font-main: Bradley Hand, cursive;
+  --font-main: 'Bradley Hand', cursive;
   --font-secondary: 'Times New Roman', Times, serif;
   --border-radius: 25px;
   --transition-speed: 0.3s;
-  
-  /* Default Theme (Sandstone) */
-  --background-color: rgb(237, 224, 206);  /* Soft sand color */
-  --secondary-background-color: rgb(214, 196, 171);  /* Darker sand */
-  --primary-color: rgb(103, 87, 71);  /* Rich sandstone */
-  --secondary-color: rgb(189, 158, 122);  /* Warm sand */
-  --tertiary-color: rgb(61, 39, 19); 
-  --black-color: rgb(40, 40, 40);  /* Deep brown */
-  --hover-color: rgb(226, 208, 184);  /* Light sand */
-  --caption-color: var(--primary-color);
-  
-  /* Theme Button Colors */
-  --theme-button-sandstone: rgb(237, 224, 206);
-  --theme-button-charcoal-coffee: rgb(72, 65, 65);
-  
-  /* Cross-theme color references for Conway cells */
-  --sandstone-primary-color: rgb(103, 87, 71);
-  --charcoal-primary-color: rgb(236, 228, 217);
-  
-  /* Overlay and Effects */
+
+  /* Effects */
   --overlay-opacity: 0.1;
   --backdrop-blur: 5px;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --border-opacity: 0.5;
+
+  /* Theme-swatch colors (used by the theme-selector button) */
+  --theme-button-sandstone: rgb(237, 224, 206);
+  --theme-button-charcoal-coffee: rgb(72, 65, 65);
+
+  /* Cross-theme color references used by Conway cells */
+  --sandstone-primary-color: rgb(103, 87, 71);
+  --charcoal-primary-color: rgb(236, 228, 217);
 }
 
-/* Sandstone Theme */
+/* Sandstone */
 .theme-sandstone {
-  --background-color: rgb(237, 224, 206);  /* Soft sand color */
-  --secondary-background-color: rgb(214, 196, 171);  /* Darker sand */
-  --primary-color: rgb(103, 87, 71);  /* Rich sandstone */
-  --secondary-color: rgb(189, 158, 122);  /* Warm sand */
+  --background-color: rgb(237, 224, 206);
+  --secondary-background-color: rgb(214, 196, 171);
+  --primary-color: rgb(103, 87, 71);
+  --secondary-color: rgb(189, 158, 122);
   --tertiary-color: rgb(181, 168, 154);
-  --black-color: rgb(40, 40, 40);  /* Deep brown */
-  --hover-color: rgb(226, 208, 184);  /* Light sand */
+  --black-color: rgb(40, 40, 40);
+  --hover-color: rgb(226, 208, 184);
   --caption-color: var(--primary-color);
 }
 
-/* Charcoal Coffee Theme */
+/* Charcoal coffee */
 .theme-charcoal-coffee {
-  --background-color: rgb(75, 68, 67);  /* Warm charcoal base */
-  --secondary-background-color: rgb(58, 52, 51);  /* Darker roasted charcoal */
-  --primary-color: rgb(236, 228, 217);  /* Creamy latte */
-  --secondary-color: rgb(205, 183, 165);  /* Coffee with cream */
+  --background-color: rgb(75, 68, 67);
+  --secondary-background-color: rgb(58, 52, 51);
+  --primary-color: rgb(236, 228, 217);
+  --secondary-color: rgb(205, 183, 165);
   --tertiary-color: rgb(181, 168, 154);
-  --black-color: rgb(45, 40, 38);  /* Deep roasted charcoal */
-  --hover-color: rgb(161, 151, 149);  /* Lighter warm charcoal */
+  --black-color: rgb(45, 40, 38);
+  --hover-color: rgb(161, 151, 149);
   --caption-color: var(--primary-color);
 }
